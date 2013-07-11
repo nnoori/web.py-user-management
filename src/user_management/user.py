@@ -22,6 +22,7 @@ urls = (
 )
 app_user_management = web.application(urls, globals())
 database = UserDatabase()
+database.setup_database()
 
 class create_user:
 

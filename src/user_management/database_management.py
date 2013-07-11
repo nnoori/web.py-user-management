@@ -43,6 +43,8 @@ class UserDatabase():
                                                email TEXT UNIQUE NOT NULL,
                                                user_type INTEGER NOT NULL );
             '''
+        print user_table_query
+        print "table should be Created"
         self.db.query(user_table_query)
     
     def delete_user(self, username, password='', user_type=USER_TYPES['user']):
@@ -132,6 +134,10 @@ class UserDatabase():
             INSERT OR IGNORE INTO users (user, pass, email, user_type) 
                 VALUES ("%s", "%s", "%s", %d);
             '''
+        print add_user_query
+        print username
+        print password
+
         self.db.query(add_user_query % (username, password, email, user_type,))
         
         return True
