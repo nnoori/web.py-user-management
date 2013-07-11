@@ -16,19 +16,18 @@ Not a whole lot.  It gives a basic outline of how to add/delete/login/logout (of
 for SQLite; but it's simply a matter of rewriting the table creation code to get it to function with any other
 SQL driven database system supported by the web.db module.
 
-<h4>Do you feel dirty for doing this?</h4>
-
-A little, yes.
 
 <h4>How secure is this?</h4>
 
-To be completely honest, I'm not really sure.  The passwords are salted and are hashed using SHA256 (which sounds
+(These are initial comments of the originator) To be completely honest, I'm not really sure.  The passwords are salted and are hashed using SHA256 (which sounds
 secure enough, imho).  Though -- I'd probably investigate a bit further before deploying this and accepting 
 credit-cards or something equally stupid.  As one of the motivating factors for me was to add user-management to 
 an in-house intranet, *I make no guarantees of this products security*.
 
-<h4>Can I help "fix" this code?  It makes me sad.</h4>
+<h4>How to run the code!</h4>
 
-Please do!  Just keep your code tidy and documented.
+# Need to make sure that data.db file exists in /data folder
+# Need to make sure the Users table exists in the data base. Either run SQL query from outside or use the code - both works
+# Run start.py
 
 //list
